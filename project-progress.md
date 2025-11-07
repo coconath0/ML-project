@@ -35,9 +35,11 @@
 ## Teaming Strategy
 - [ ] Individual team member contributions.
 
-| Name            | Contribution                          | Section(s) Authored / Tasks Completed |
-|-----------------|---------------------------------------|---------------------------------------|
-| [ ] Team Member | What where how                        |
+| Name | Contribution | Section(s) Authored / Tasks Completed |
+|------------|------------|------------|
+| [ ] Aleena Tomy | What where how |
+| [ ] JD Escobedo | What where how |
+| [ ] Nathaly Ingol | What where how |
 
 (Add additional rows as needed for each member.)
 
