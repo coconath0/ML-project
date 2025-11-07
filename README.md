@@ -80,9 +80,9 @@ Who does what? When and how often do you meet?
 
 
 - What if your baseline is GIGO? 
-* Re-examine data preprocessing for missing or erroneous timestamps.
-* Implement stronger feature selection and normalization steps.
-* Use resampling and data augmentation to improve input quality.
-* Fall back to simpler, interpretable statistical models to ensure valid results.
+    * Re-examine data preprocessing for missing or erroneous timestamps.
+    * Implement stronger feature selection and normalization steps.
+    * Use resampling and data augmentation to improve input quality.
+    * Fall back to simpler, interpretable statistical models to ensure valid results.
 
 
