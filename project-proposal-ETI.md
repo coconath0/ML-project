@@ -10,6 +10,12 @@
 This project aims to develop a machine learning model to **classify water samples** by their probability of exceeding pollution thresholds, identifying potential environmental hazards. We will use the **Water Quality (46085)** dataset, which requires a critical **data transformation (pivoting)** from long to wide format. By analyzing chemical parameters (Fecal Coliform, Nitrogen, etc.) and temporal/location features, we plan to train a **Gradient Boosting Classifier** to predict future hazard status. This analysis will help identify the **most relevant chemical indicators** driving poor water quality.
 
 ## Problem Statement
+Water quality monitoring often involves slow, expensive lab tests, and identifying which sites are becoming polluted is challenging due to the large number of parameters. Our objective is to develop a **Classification Model** that can accurately predict if a water sample (based on its chemical fingerprint and location) will exceed critical health/environmental thresholds.
+
+* **Problem:** The raw data is in a complex **long format** and its ultimate size must be validated after transformation.
+* **Objective:** Develop a **Binary Classification Model** that predicts a sample's **Hazard Status** (Safe vs. Unsafe) based on its chemical profile.
+* **Benchmark:** We will use a **Simple Logistic Regression Classifier** as our benchmark to test the foundational strength of the chemical features. We will aim for an $\text{F1}$-score exceeding $0.75$.
+* [cite_start]**Data Origin:** The data comes from **OpenML (ID: 46085)** and consists of multiple environmental parameters recorded across various sites and years[cite: 1, 19, 21].
 
 
 ## Dataset
