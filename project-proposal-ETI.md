@@ -15,7 +15,7 @@ Water quality monitoring often involves slow, expensive lab tests, and identifyi
 * **Problem:** The raw data is in a complex **long format** and its ultimate size must be validated after transformation.
 * **Objective:** Develop a **Binary Classification Model** that predicts a sample's **Hazard Status** (Safe vs. Unsafe) based on its chemical profile.
 * **Benchmark:** We will use a **Simple Logistic Regression Classifier** as our benchmark to test the foundational strength of the chemical features. We will aim for an $\text{F1}$-score exceeding $0.75$.
-* **Data Origin:** The data comes from **OpenML (ID: 46085)** and consists of multiple environmental parameters recorded across various sites and years[cite: 1, 19, 21].
+* **Data Origin:** The data comes from **OpenML (ID: 46085)** and consists of multiple environmental parameters recorded across various sites and years.
 
 
 ## Dataset
