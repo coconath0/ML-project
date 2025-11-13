@@ -7,15 +7,19 @@
 - JD (John) Escobedo - dxh19
 
 ## Project Abstract
-This project aims to develop a machine learning model to **classify water samples** by their probability of exceeding pollution thresholds, identifying potential environmental hazards. We will use the **Water Quality (46085)** dataset, which requires a critical **data transformation (pivoting)** from long to wide format. By analyzing chemical parameters (Fecal Coliform, Nitrogen, etc.) and temporal/location features, we plan to train a **Gradient Boosting Classifier** to predict future hazard status. This analysis will help identify the **most relevant chemical indicators** driving poor water quality.
+In this project we would like to focus on pollution metrics for water quality to predict when a future hazardous pollution level could be obseved. The model would be fed the Water_Quality dataset with over 30 million values to train on. While there are around 10 million potentially empty values, we believe having a large dataset that is not completely sterile will allow us to improve our understanding of modelling better. We will implement gradient boosting to ensure the final output of the model has iterated sufficiently to improve on previous errors. The parameters that seem the most promising to predict water pollution are Fecal Coliform, Nitrogen, Temperature and a few others along with location features. We believe with some minor feature selection, we can effectively determine the most likely contributing factors to a future water pollution hazard.
+
+Water quality monitoring often involves slow, expensive lab tests, and identifying which sites are becoming polluted is challenging due to the large number of parameters. Our objective is to develop a Classification Model that can accurately predict if a water sample (based on its chemical fingerprint and location) will exceed critical health/environmental thresholds.
 
 ## Problem Statement
-Water quality monitoring often involves slow, expensive lab tests, and identifying which sites are becoming polluted is challenging due to the large number of parameters. Our objective is to develop a **Classification Model** that can accurately predict if a water sample (based on its chemical fingerprint and location) will exceed critical health/environmental thresholds.
+Water quality is a pressing issue that has become more important as scarcity in southern and/or landlocked regions has resulted in more advanced solutions. With a large dataset comprised of various observation sites, we aim to effectively determine which factors play the largest role in determining when a given water site will reach a hazardous pollution level.
 
-* **Problem:** The raw data is in a complex **long format** and its ultimate size must be validated after transformation.
-* **Objective:** Develop a **Binary Classification Model** that predicts a sample's **Hazard Status** (Safe vs. Unsafe) based on its chemical profile.
+In doing so, we believe we can contribute to finding patterns or markers that will allow for the prevention of major pollution of a water site based on its current content, temperature, and location etc.
+
+* **Problem**: The raw data is in a complex long format and its ultimate size must be validated after transformation.
+* **Objective**: Develop a Binary Classification Model that predicts a sample's Hazard Status (Safe vs. Unsafe) based on its chemical profile.
 * **Benchmark:** We will use a **Simple Logistic Regression Classifier** as our benchmark to test the foundational strength of the chemical features. We will aim for an $\text{F1}$-score exceeding $0.75$.
-* **Data Origin:** The data comes from **OpenML (ID: 46085)** and consists of multiple environmental parameters recorded across various sites and years.
+* **Data Origin:** The data comes from OpenML (ID: 46085) and consists of multiple environmental parameters recorded across various sites and years.
 
 
 ## Dataset
