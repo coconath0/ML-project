@@ -7,7 +7,7 @@
 - JD (John) Escobedo - dxh19
 
 ## Project Abstract
-
+This project aims to develop a machine learning model to **classify water samples** by their probability of exceeding pollution thresholds, identifying potential environmental hazards. We will use the **Water Quality (46085)** dataset, which requires a critical **data transformation (pivoting)** from long to wide format. By analyzing chemical parameters (Fecal Coliform, Nitrogen, etc.) and temporal/location features, we plan to train a **Gradient Boosting Classifier** to predict future hazard status. This analysis will help identify the **most relevant chemical indicators** driving poor water quality.
 
 ## Problem Statement
 
