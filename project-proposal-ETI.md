@@ -27,6 +27,7 @@ In doing so, we believe we can contribute to finding patterns or markers that wi
 - Source: OpenML
     - LINK: https://www.openml.org/search?type=data&status=active&id=46085&sort=runs 
 - Size: 12.59M instances x 25 features
+- Missing values: 10.22 M
 - Format: CSV 
 
 ## Methodology
@@ -54,11 +55,11 @@ Who does what? When and how often do you meet?
 ### Role Assignments and Commitment Matrix
 
 
-| Role  | Teammate    | Responsibility | Commitment |
+| Role  | Teammate    | Responsibility | Commitment (Hours/week) |
 | :---: | :---------: | :--------: | :--------: |
-| A     | Aleena      |            |            |
-| B     | JD Escobedo |            |            |
-| C     | Nathaly     |            |            |
+| A     | Aleena      | Cleaning, handling missing values, parsing timestamp fields, transforming long → wide format, feature engineering | 8 hrs |
+| B     | JD | Implement baseline logistic regression, build gradient boosting model, tune hyperparameters, evaluate performance | 8 hrs |
+| C     | Nathaly     | Summary stats, histograms, correlation heatmaps, boxplots, missing data visualizations, interpretation of patterns | 8 hrs |
 
 
 - Project assignments and completion plan.  
