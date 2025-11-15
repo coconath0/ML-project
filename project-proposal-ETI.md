@@ -26,7 +26,7 @@ In doing so, we believe we can contribute to finding patterns or markers that wi
 - Dataset Name: Water_Quality  (Water quality measurements from various sites)
 - Source: OpenML
     - LINK: https://www.openml.org/search?type=data&status=active&id=46085&sort=runs 
-- Size: 12.59M instances x 25 features
+- Size: 1.26M instances x 25 features
 - Missing values: 10.22 M
 - Format: CSV 
 
