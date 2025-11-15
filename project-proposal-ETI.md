@@ -30,6 +30,24 @@ In doing so, we believe we can contribute to finding patterns or markers that wi
 - Missing values: 10.22 M
 - Format: CSV 
 
+- Attribute Description:
+    - Sample ID: Unique identifier for each sample (e.g., 58086).
+    - Grab ID: Identifier for the specific collection instance, with some entries missing.
+    - Profile ID: Unique profile number associated with each sample site (e.g., 46937).
+    - Sample Number: A distinct code for each sample, combining letters and numbers (e.g., 'L47270-122').
+    - Collect DateTime: Date and time when the sample was collected, in MM/DD/YYYY HH:MM:SS AM/PM format.
+    - Depth (m): Depth at which the sample was collected, in meters (e.g., 1.0).
+    - Site Type: Classification of the water body from which the sample was taken (e.g., Large Lakes).
+    - Area: Geographic location or name of the water body (e.g., Central Puget Sound).
+    - Locator: A unique code for the site's location (e.g., KTHA03).
+    - Site: Detailed description of the sample location (e.g., Lake Sammamish near Issaquah Creek).
+    - Parameter: The water quality parameter measured (e.g., Fecal Coliform).
+    - Value: The measured value for the parameter, with some missing entries.
+    - Units: Measurement units for the parameter values (e.g., umhos/cm).
+    - QualityId: A numerical value indicating the quality of the data (e.g., 2).
+    - Lab Qualifier, MDL, RDL, Text Value, Sample Info, Steward Note, Replicates, Replicate Of, Method, Date Analyzed, Data Source: These fields contain additional information about the laboratory procedures, data quality analysis methods, and sources.
+
+
 ## Methodology
 1. Data Preprocessing
 - Clean and format timestamp data.
