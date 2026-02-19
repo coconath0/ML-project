@@ -1,65 +1,30 @@
-💧 Water Quality Prediction Project (OpenML ID: 46085)
+# Water Quality Hazard Classification and Attribute Analysis (OpenML ID: 46085)
 
-This repository contains the analysis and modeling code for the Water Quality Hazard Classification project.
+## Abstract
+This project addresses the critical public safety need for rapid water toxicity detection by developing a Machine Learning classifier to predict "Hazardous" water samples based on chemical profiles. The primary goal was to build a binary classification model that predicts hazards instantly using real-time chemical markers, preventing public exposure during the standard 24-48 hour biological testing window.
 
-👥 Setup and Local Environment
+Directly addressing requirements to minimize False Negatives, our team transitioned from a linear Logistic Regression baseline to a non-linear XGBoost architecture. We overcame significant data challenges by transforming an OpenML dataset from a sparse "Long Format" of 1.26M rows into a structured wide-format of 51k samples. While the baseline model failed to detect 59% of hazards (Recall: 0.41), our final Optimized XGBoost model—tuned via Precision-Recall thresholding—increased Recall to 0.70. This improvement successfully balances hazard detection with operational viability, identifying Total Phosphorus, Enterococcus, and Total Suspended Solids as the primary scientific drivers of water toxicity.
 
-IMPORTANT: This project uses a large dataset (`water-quality-46085.csv`) which IS NOT stored in Git. You must follow the steps below to fetch the data locally.
+## Experimental Results and Comparative Analysis
 
-1. Initial Setup
+### Model Performance Summary
+We successfully raised the primary safety metric (Recall) by 70% relative to the baseline. The transition to XGBoost drastically reduced the "False Negative" count, directly addressing the core safety objective of minimizing missed hazards.
 
-Clone the repository:
-```
-  git clone [Your Repository URL]
-  cd [Your-Repo-Name]
-```
-
-Create the Data Folder: This folder is necessary because the Python notebooks look for the data here.
-
-```mkdir data```
-
-
-Install Python Dependencies: (You might need a virtual environment, e.g., venv or conda):
-
-```pip install openml pandas numpy matplotlib seaborn```
+| Metric | Baseline (LogReg) | Weighted XGBoost | Final Optimized XGBoost |
+| :--- | :--- | :--- | :--- |
+| **Recall (Safety)** | 0.41 | 0.84 | 0.70 |
+| **Precision** | 0.81 | 0.57 | 0.70 |
+| **F1-Score** | 0.55 | 0.68 | 0.70 |
+| **False Negatives** | 1,376 (High Risk) | 385 (Best Safety) | 700 (Balanced) |
 
 
-2. Fetch the Dataset Locally (Action Required)
 
-The dataset is retrieved directly from OpenML using its ID (`46085`) and saved into your local `/data/` folder.
+### Scientific Drivers of Toxicity
+Using XGBoost Feature Importance, we identified the top chemical drivers for hazard predictions, validating the model’s scientific accuracy:
 
-Action: Open the data_fetch_script.ipynb notebook located in the root of the project and run all cells.
+* **Total Phosphorus (0.2757):** The strongest predictor, likely due to agricultural runoff fueling bacterial growth.
+* **Enterococcus (0.1300):** A direct biological indicator strongly correlated with Fecal Coliform.
+* **Total Suspended Solids (0.1013):** Indicates water clarity and particulate matter where bacteria attach.
+* **E. coli (0.0793):** A direct measure of fecal contamination.
+* **Hour_cos (0.0729):** Captured via cyclical time feature engineering to identify temporal toxicity patterns.
 
-⚙️ The Fetching Code Snippet:
-
-The script ensures you have the exact file named `water-quality-46085.csv` in your local `/data/` folder. First, file `obtain-csv.ipynb` should be executed, to get the dataset from openML:
-
-```
-import openml
-import os
-# ... (rest of the fetching and saving code)
-# ... 
-OUTPUT_FILE = os.path.join(OUTPUT_FOLDER, 'water-quality-46085.csv')
-# ...
-```
-
-
-3. Workflow for Collaboration (Git)
-
-Never commit the `/data/` folder. The `.gitignore` file already prevents this.
-
-Always pull changes before you start working: git pull origin main
-
-Always push your changes when you finish a task: `git push origin [your-branch-name]`
-
-🔬 Next Steps: Data Quality Report
-
-Your first task is to open `water_quality_analysis.ipynb` and run the notebook top-to-bottom. This notebook will:
-
-Load the data from your local `/data/` folder.
-
-Pivot the long-format data into a wide format.
-
-Generate the full Attribute Quality Report (missing values, range, $\text{N/A}$ count for all $\approx 25$ columns).
-
-Produce the Histograms and Correlation Heatmap for the professor's review.
