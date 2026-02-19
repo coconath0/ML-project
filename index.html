@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Water Quality Hazard Classification</title>
+</head>
+
+<body>
+
+    <!-- Cursor ring.. soon... 
+    <div class="cursor" id="cur"></div>
+    <div class="cursor-ring" id="cring"></div> -->
+
+    <nav>
+        <span class="nav-logo">H20 . ML . 2025</span>
+
+        <div class="nav-links">
+            <a href="#eda">EDA</a>
+            <a href="#methodology">Methodology</a>
+            <a href="#results">Results</a>
+            <a href="#team">Team</a>
+            <a href="#github">Github</a>
+        </div>
+
+    </nav>
+
+    <!-- Responsive section... in progress 
+    
+    <div>
+        
+    </div>
+    -->
+
+    <section class="hero" id="home">
+        <div class="hero-orb"></div>
+        <div class="hero-eyebrow">Machine Learning . CS Course Project . 2025</div>
+
+        <h1>Water <br> <span class="ca">Quality </span><br> <span class="cd">Hazard</span> <br> Classification</h1>
+        <p class="hero-sub">Predicting toxic water events instantly using chemical markers, replacing 24-48 hour
+            biological with an XGBoost model achieving 0.78 Recall and F1-Score. </p>
+
+        <div class="hero-cta">
+            <a href="https://github.com/coconath0/ML-project" target="_blank" class="btn btn-primary">View on GitHub</a>
+            <a href="#eda" class="btn btn-ghost">Explore Graphs ↓</a>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stat"><span class="stat-num">51k+</span><span class="stat-label">Water Samples</span></div>
+        <div class="stat"><span class="stat-num">48</span><span class="stat-label">Chemical Features</span></div>
+        <div class="stat"><span class="stat-num" style="color:var(--accent3)">0.70</span><span class="stat-label">Final
+                F1 Score</span></div>
+        <div class="stat"><span class="stat-num" style="color:var(--accent2)">+70%</span><span class="stat-label">Recall
+                Improvement</span></div>
+    </div>
+
+    <section id="eda">
+        <div class="section-tag">02 - Exploratory Data Analysis</div>
+        <h2 class="section-title">Every chart that shaped our modeling decisions.</h2>
+
+    </section>
+
+    <section id="methodology" class="alt-bg">
+        <div class="section-tag">03 - Methodology</div>
+        <h2 class="section-title">From linear failure to non-linear success - step by step.</h2>
+
+        <div class="method-timeline">
+
+
+        </div>
+    </section>
+
+    <section id="results">
+        <div class="section-tag">04 - Results</div>
+        <h2 class="section-title">Recall improved <span style="color:var(--accent)">70%</span> - from 0.41 to 0.70.</h2>
+
+        <div>
+
+        </div>
+    </section>
+
+    <section>
+        <div>
+
+        </div>
+    </section>
+
+    <section>
+        <div>
+
+        </div>
+    </section>
+
+    <section id="team" class="alt-bg">
+        <div class="section-tag">05 - Team</div>
+        <h2 class="section-title">Three contributors, one mission.</h2>
+        <div class="team-grid fi">
+            <div class="team-card">
+                <div class="team-init">NI</div>
+                <div class="team-name">Nathaly Ingol</div>
+                <div class="team-id">
+                    <a href="https://github.com/coconath0" target="_blank" style="font-size:20px; color: #00e5ff;">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nathaly-ingol-leon" target="_blank"
+                        style="font-size:20px; color: #00e5ff;">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="team-role">EDA Analyst . Visualization Lead . Git Manager</div>
+
+
+                <div class="team-tasks">25-column quality analysis, histograms, correlation heatmaps, class distribution
+                    charts. Authored Dataset and EDA sections. Git LFS management.</div>
+
+            </div>
+
+            <div class="team-card">
+                <div class="team-init">AT</div>
+                <div class="team-name">Aleena Tomy</div>
+                <div class="team-id">
+                    <a href="https://github.com/aleenatomy2802" target="_blank" style="font-size:20px; color: #00e5ff;">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aleena-tomy-1b32a723a" target="_blank"
+                        style="font-size:20px; color: #00e5ff;">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="team-role">Modeling Lead . Hyperparameter Tuning</div>
+                <div class="team-tasks">Logistic Regression baseline, full XGBoost pipeline, threshold tuning via
+                    Precision-Recall analysis. Authored Methodology and Results.</div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-init">JD</div>
+                <div class="team-name">JD Escobedo</div>
+                <div class="team-id">
+                    <a href="https://github.com/dxh19" target="_blank" style="font-size:20px; color: #00e5ff;">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="team-role">Data Engineer . Git Manager</div>
+                <div class="team-tasks">
+                    Python pivot/merge pipeline for long → wide transformation. Git LFS management,
+                    final report compilation.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            Water Quality Hazard Classification · Machine Learning · 2025<br>
+            Dataset: OpenML Water Quality (ID 46085) · XGBoost · Scikit-learn
+        </div>
+        <div class="footer-links">
+            <a href="https://github.com/coconath0/ML-project" target="_blank">GitHub ↗</a>
+            <a href="https://www.openml.org/search?type=data&status=active&id=46085" target="_blank">Dataset ↗</a>
+            <a href="#home">Top ↑</a>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
